@@ -252,20 +252,14 @@
         .rev_slider_wrapper .rev-btn-1{font-size:15px;padding:12px 18px}
 
         /* Show navigation arrows on non-mobile breakpoints */
-        @media(min-width:576px){
-            /* Hero (Revolution Slider) arrows visible on non-mobile */
-            .rev_slider_wrapper .tparrows{display:block!important;opacity:1!important;visibility:visible!important;z-index:50}
-            .rev_slider_wrapper .tparrows.tp-leftarrow{left:20px!important}
-            .rev_slider_wrapper .tparrows.tp-rightarrow{right:20px!important}
-            /* Projects (slick) arrows visible on non-mobile */
-            .slick__nav.arrows-1{display:flex!important;align-items:center;justify-content:space-between}
-            .slick__nav.arrows-1 .slick-prev,
-            .slick__nav.arrows-1 .slick-next{opacity:1;pointer-events:auto}
-        }
-        @media(max-width:575.98px){
-            .rev_slider_wrapper .tparrows{display:none!important}
-            .slick__nav.arrows-1{display:none!important}
-        }
+        /* Hero (Revolution Slider) arrows visible on ALL breakpoints */
+        .rev_slider_wrapper .tparrows{display:block!important;opacity:1!important;visibility:visible!important;z-index:50}
+        .rev_slider_wrapper .tparrows.tp-leftarrow{left:16px!important}
+        .rev_slider_wrapper .tparrows.tp-rightarrow{right:16px!important}
+        /* Projects (slick) arrows visible on ALL breakpoints */
+        .slick__nav.arrows-1{display:flex!important;align-items:center;justify-content:space-between}
+        .slick__nav.arrows-1 .slick-prev,
+        .slick__nav.arrows-1 .slick-next{opacity:1;pointer-events:auto}
 
         @media(max-width:1200px){
             .rev_slider_wrapper p.tp-caption{max-width:60vw}
@@ -333,8 +327,8 @@
                                 data-x="[left]" data-y="[center]" data-hoffset="[0, 0, 0, 0, 0]" data-voffset="[90, 90, 100, 100, 100]" data-paddingleft="[0, 0, 0, 0, 15]" data-paddingright="[0, 0, 0, 0, 15]" data-width="[560,560,460,480,440]" data-height="[&quot;auto&quot;]"
                                 data-whitespace="normal" data-color="#fff" data-fontweight="400" data-fontsize="[16, 16, 14, 15, 14]" data-textalign="[left, left, left, left, left]" style="margin-top:12px;">Zespół doświadczonych architektów z Bielska-Białej, specjalizujących się w projektowaniu nowoczesnych domów jednorodzinnych, budynków komercyjnych i adaptacjach projektów. Nasze 25-letnie doświadczenie obejmuje kompleksową obsługę projektową.</p>
                                 <a class="tp-caption tp-resizeme" href="#" target="_self" data-frames="[{&quot;delay&quot;:0,&quot;speed&quot;:1800,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:[100%];s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:800,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]"
-                                data-x="[left]" data-y="[center]" data-hoffset="[0, 0, 0, 0, 15]" data-voffset="[170, 170, 160, 160, 160]" data-width="['auto']" data-height="[&quot;auto&quot;]" data-responsive_offset="on" data-responsive="off" data-whitespace="[nowrap, nowrap, nowrap, nowrap, nowrap]">
-                                    <span class="rev-btn-1">mgr inż. architekt Rafał Mazur
+                                data-x="[left]" data-y="[center]" data-hoffset="[0, 0, 0, 0, 15]" data-voffset="[150, 150, 150, 150, 150]" data-width="['auto']" data-height="[&quot;auto&quot;]" data-responsive_offset="on" data-responsive="off" data-whitespace="[nowrap, nowrap, nowrap, nowrap, nowrap]">
+                                    <span class="rev-btn-1" style="display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,.7);padding:12px 18px;border-radius:4px;background:rgba(0,0,0,.15)">mgr inż. architekt Rafał Mazur
                                         <span class="arrow" data-paddingleft="5" aria-hidden="true">
                                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
