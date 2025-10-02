@@ -231,6 +231,17 @@
             .mobile-offcanvas .offcanvas-contact .social-row{display:flex;gap:16px;justify-content:center;margin-top:10px}
             .mobile-offcanvas .offcanvas-contact .social-row a{display:inline-flex}
             body.no-scroll{overflow:hidden}
+            /* 1) padding boczny dla wszystkich sekcji na mobile */
+            .container, .container-fluid{padding-left:16px;padding-right:16px}
+            /* 2) zwiększony górny padding w sekcji O nas */
+            section.p-t-10.p-b-55{padding-top:30px!important}
+            /* 3) zmniejszone nagłówki o ~12% */
+            h1{font-size:32px}
+            h2, .title-1{font-size:26px}
+            h3{font-size:21px}
+            h4{font-size:16px}
+            h5{font-size:14px}
+            h6{font-size:12px}
         }
 
         /* Responsive improvements for hero slider */
@@ -306,7 +317,7 @@
             <!-- SLIDER-->
             <section>
                 <div class="rev_slider_wrapper rev_slider_wrapper--p80 tp-overflow-hidden">
-                    <div class="rev_slider fullwidthabanner js-rev" data-version="5.4.4" style="display:none" data-rev-layout="fullscreen" data-rev-stylearrow="au-rev-arrow-1" data-rev-bullets="true" data-rev-stylebullet="au-rev-bullet-1" data-rev-voffbullet="55">
+                    <div class="rev_slider fullwidthabanner js-rev" data-version="5.4.4" style="display:none" data-rev-layout="fullscreen" data-rev-stylearrow="au-rev-arrow-1" data-rev-arrows="true" data-rev-bullets="true" data-rev-stylebullet="au-rev-bullet-1" data-rev-voffbullet="55">
                         <ul>
                             <li class="rev-item rev-item-1" data-transition="crossfade">
                                 <img class="rev-slidebg" src="images/luxurious-stucco-and-concrete-villa-featuring-eleg-2025-02-09-16-07-30-utc.jpg" alt="Slide 1" style="object-position:center 65%;" />
