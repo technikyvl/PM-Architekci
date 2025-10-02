@@ -283,6 +283,9 @@
             /* white arrows for mobile when on slider */
             .rev_slider_wrapper .tparrows{color:#fff!important;position:absolute!important;width:22px;height:22px}
             .rev_slider_wrapper .tp-leftarrow.tparrows::after, .rev_slider_wrapper .tp-rightarrow.tparrows::after{width:12px;height:12px}
+            /* avoid left-edge clipping specifically for slides 2 and 3 */
+            .rev_slider ul > li:nth-child(2) .rev-text-2,
+            .rev_slider ul > li:nth-child(3) .rev-text-2{padding-left:18px;padding-right:12px;max-width:calc(100vw - 30px)}
         }
         @media(max-width:767.98px){
             .rev_slider_wrapper .rev-text-2{font-size:28px !important;max-width:86vw;white-space:normal!important;word-break:break-word}
@@ -305,6 +308,9 @@
             /* prevent left-edge clipping on extra small devices */
             .rev_slider_wrapper .rev-text-2{padding-left:14px;padding-right:12px}
             .rev_slider_wrapper .rev-text-1{padding-left:14px;padding-right:12px}
+            /* stronger fix for slides 2 and 3 on very small widths */
+            .rev_slider ul > li:nth-child(2) .rev-text-2,
+            .rev_slider ul > li:nth-child(3) .rev-text-2{padding-left:22px;padding-right:14px;max-width:calc(100vw - 36px)}
         }
         </style>
 
