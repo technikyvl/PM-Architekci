@@ -255,9 +255,11 @@
 
         /* Show navigation arrows on ALL breakpoints */
         /* Hero (Revolution Slider) arrows visible on ALL breakpoints */
-        .rev_slider_wrapper .tparrows{display:block!important;opacity:1!important;visibility:visible!important;z-index:50}
-        .rev_slider_wrapper .tparrows.tp-leftarrow{left:20px!important}
-        .rev_slider_wrapper .tparrows.tp-rightarrow{right:20px!important}
+        .rev_slider_wrapper .tparrows{display:block!important;opacity:1!important;visibility:visible!important;z-index:50!important}
+        .rev_slider_wrapper .tparrows.tp-leftarrow{left:20px!important;top:50%!important;transform:translateY(-50%)!important}
+        .rev_slider_wrapper .tparrows.tp-rightarrow{right:20px!important;top:50%!important;transform:translateY(-50%)!important}
+        /* Force arrow visibility */
+        .rev_slider_wrapper .tp-leftarrow, .rev_slider_wrapper .tp-rightarrow{display:block!important;opacity:1!important;visibility:visible!important}
         /* Projects (slick) arrows visible on ALL breakpoints */
         .slick__nav.arrows-1{display:flex!important;align-items:center;justify-content:space-between}
         .slick__nav.arrows-1 .slick-prev,
@@ -274,8 +276,8 @@
             /* podnieś cały blok treści na mobile lekko w górę */
             .rev_slider_wrapper .rev-text-2{margin-top:-12px}
             /* mobile arrow positioning */
-            .rev_slider_wrapper .tparrows.tp-leftarrow{left:12px!important}
-            .rev_slider_wrapper .tparrows.tp-rightarrow{right:12px!important}
+            .rev_slider_wrapper .tparrows.tp-leftarrow{left:12px!important;top:50%!important;transform:translateY(-50%)!important}
+            .rev_slider_wrapper .tparrows.tp-rightarrow{right:12px!important;top:50%!important;transform:translateY(-50%)!important}
         }
         @media(max-width:767.98px){
             .rev_slider_wrapper .rev-text-2{font-size:28px !important;max-width:86vw;white-space:normal!important;word-break:break-word}
@@ -287,8 +289,8 @@
             .rev_slider_wrapper p.tp-caption{font-size:12px !important;max-width:90vw}
             .rev_slider_wrapper .rev-btn-1{font-size:11px !important;padding:6px 10px !important}
             /* small mobile arrow positioning */
-            .rev_slider_wrapper .tparrows.tp-leftarrow{left:8px!important}
-            .rev_slider_wrapper .tparrows.tp-rightarrow{right:8px!important}
+            .rev_slider_wrapper .tparrows.tp-leftarrow{left:8px!important;top:50%!important;transform:translateY(-50%)!important}
+            .rev_slider_wrapper .tparrows.tp-rightarrow{right:8px!important;top:50%!important;transform:translateY(-50%)!important}
         }
         </style>
 
