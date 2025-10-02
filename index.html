@@ -18,6 +18,10 @@
     <link href="vendor/themify-font/themify-icons.css" rel="stylesheet" media="all">
     <!-- Base fonts of theme-->
     <link href="css/poppins-font.min.css" rel="stylesheet" media="all">
+    <!-- Google Fonts Poppins with Polish characters support -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap&subset=latin,latin-ext" rel="stylesheet">
     <!-- Font special for pages-->
 
     <!-- Bootstrap CSS-->
@@ -62,6 +66,14 @@
         transform:translate(-50%,-50%) rotate(45deg);
     }
     .tp-rightarrow.tparrows::after{ transform:translate(-50%,-50%) rotate(-135deg); }
+    
+    /* Ensure proper Polish character rendering */
+    body, h1, h2, h3, h4, h5, h6, p, span, div, a, button, input, textarea, select {
+        font-family: 'Poppins', Arial, "Helvetica Neue", sans-serif !important;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
     </style>
 
     <!--Favicons-->
@@ -88,20 +100,20 @@
                                 <div class="header__content-right">
                                     <nav class="header-nav-menu">
                                         <ul class="menu nav-menu">
-                                            <li class="menu-item">
+                                                    <li class="menu-item">
                                                 <a href="index.html">Strona główna</a>
-                                            </li>
-                                            <li class="menu-item">
+                                                    </li>
+                                                    <li class="menu-item">
                                                 <a href="about-us.html">O nas</a>
-                                            </li>
-                                            <li class="menu-item">
+                                                    </li>
+                                                    <li class="menu-item">
                                                 <a href="project-grid-full.html">Projekty</a>
-                                            </li>
+                                                    </li>
                                             
-                                            <li class="menu-item">
+                                                    <li class="menu-item">
                                                 <a href="blog-grid.html">Blog</a>
-                                            </li>
-                                            <li class="menu-item">
+                                                    </li>
+                                                    <li class="menu-item">
                                                 <a href="contact.html">Kontakt</a>
                                             </li>
                                         </ul>
@@ -189,7 +201,7 @@
                             <li class="menu-item">
                                 <a href="about-us.html">O nas</a>
                             </li>
-                            <li class="menu-item">
+                                    <li class="menu-item">
                                 <a href="project-grid-full.html">Projekty</a>
                             </li>
                             <li class="menu-item menu-item-has-children">
@@ -215,10 +227,10 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="menu-item">
+                                    <li class="menu-item">
                                 <a href="blog-grid.html">Blog</a>
-                            </li>
-                            <li class="menu-item">
+                                    </li>
+                                    <li class="menu-item">
                                 <a href="contact.html">Kontakt</a>
                             </li>
                         </ul>
@@ -673,7 +685,7 @@
                                 <div class="brand-item"><i class="fab fa-youtube"></i><span>YouTube</span></div>
                                 <div class="brand-item"><i class="fab fa-amazon"></i><span>Amazon</span></div>
                                 <div class="brand-item"><i class="fab fa-google"></i><span>Google</span></div>
-                            </div>
+                        </div>
                             <div class="brand-row" aria-hidden="true">
                                 <div class="brand-item"><i class="fab fa-spotify"></i><span>Spotify</span></div>
                                 <div class="brand-item"><i class="fab fa-youtube"></i><span>YouTube</span></div>
@@ -683,9 +695,9 @@
                                 <div class="brand-item"><i class="fab fa-youtube"></i><span>YouTube</span></div>
                                 <div class="brand-item"><i class="fab fa-amazon"></i><span>Amazon</span></div>
                                 <div class="brand-item"><i class="fab fa-google"></i><span>Google</span></div>
-                            </div>
                         </div>
-                    </div>
+                        </div>
+                        </div>
                     <div class="brand-scroller" aria-label="Partnerzy - linia 2">
                         <div class="brand-track reverse">
                             <div class="brand-row">
@@ -697,7 +709,7 @@
                                 <div class="brand-item"><i class="fab fa-youtube"></i><span>YouTube</span></div>
                                 <div class="brand-item"><i class="fab fa-amazon"></i><span>Amazon</span></div>
                                 <div class="brand-item"><i class="fab fa-google"></i><span>Google</span></div>
-                            </div>
+                        </div>
                             <div class="brand-row" aria-hidden="true">
                                 <div class="brand-item"><i class="fab fa-spotify"></i><span>Spotify</span></div>
                                 <div class="brand-item"><i class="fab fa-youtube"></i><span>YouTube</span></div>
@@ -707,7 +719,7 @@
                                 <div class="brand-item"><i class="fab fa-youtube"></i><span>YouTube</span></div>
                                 <div class="brand-item"><i class="fab fa-amazon"></i><span>Amazon</span></div>
                                 <div class="brand-item"><i class="fab fa-google"></i><span>Google</span></div>
-                            </div>
+                        </div>
                         </div>
                     </div>
                 </div>
