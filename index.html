@@ -241,8 +241,14 @@
 
         /* Show navigation arrows on non-mobile breakpoints */
         @media(min-width:576px){
-            .rev_slider_wrapper .tparrows{display:block!important;opacity:1}
-            .slick__nav.arrows-1{display:flex!important}
+            /* Hero (Revolution Slider) arrows visible on non-mobile */
+            .rev_slider_wrapper .tparrows{display:block!important;opacity:1!important;visibility:visible!important;z-index:50}
+            .rev_slider_wrapper .tparrows.tp-leftarrow{left:20px!important}
+            .rev_slider_wrapper .tparrows.tp-rightarrow{right:20px!important}
+            /* Projects (slick) arrows visible on non-mobile */
+            .slick__nav.arrows-1{display:flex!important;align-items:center;justify-content:space-between}
+            .slick__nav.arrows-1 .slick-prev,
+            .slick__nav.arrows-1 .slick-next{opacity:1;pointer-events:auto}
         }
         @media(max-width:575.98px){
             .rev_slider_wrapper .tparrows{display:none!important}
