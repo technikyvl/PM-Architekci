@@ -37,6 +37,18 @@
     <link href="css/main.min.css" rel="stylesheet" media="all">
 
     <style>
+    /* Brand scroller styles */
+    .brand-scroller{overflow:hidden;position:relative;mask-image:linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0));-webkit-mask-image:linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0));margin-bottom:24px}
+    .brand-track{display:flex;gap:2rem;animation:marquee 40s linear infinite}
+    .brand-track.reverse{animation:marquee-reverse 40s linear infinite}
+    .brand-item{display:flex;align-items:center;gap:12px;min-width:140px;opacity:.85}
+    .brand-item i{font-size:22px}
+    .brand-item span{font-weight:600}
+    @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+    @keyframes marquee-reverse{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+    </style>
+
+    <style>
     /* Hero (Revolution Slider) arrows styled like other sliders */
     .tparrows{
         width:18px; height:18px; background:transparent !important; position:relative;
@@ -648,46 +660,29 @@
                         <h5 class="title-sub">Zaufani partnerzy</h5>
                         <h2 class="title-1">Nasi klienci</h2>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-3 col-md-6">
-                            <a class="img-client" href="#">
-                                <img src="images/icon/client-01.png" alt="Client 1">
-                            </a>
+                    <!-- Brand Scroller (vanilla HTML/CSS equivalent of provided React component) -->
+                    <div class="brand-scroller" aria-label="Partnerzy - linia 1">
+                        <div class="brand-track">
+                            <div class="brand-item"><i class="fab fa-spotify"></i><span>Spotify</span></div>
+                            <div class="brand-item"><i class="fab fa-youtube"></i><span>YouTube</span></div>
+                            <div class="brand-item"><i class="fab fa-amazon"></i><span>Amazon</span></div>
+                            <div class="brand-item"><i class="fab fa-google"></i><span>Google</span></div>
+                            <div class="brand-item"><i class="fab fa-spotify"></i><span>Spotify</span></div>
+                            <div class="brand-item"><i class="fab fa-youtube"></i><span>YouTube</span></div>
+                            <div class="brand-item"><i class="fab fa-amazon"></i><span>Amazon</span></div>
+                            <div class="brand-item"><i class="fab fa-google"></i><span>Google</span></div>
                         </div>
-                        <div class="col-lg-3 col-md-6">
-                            <a class="img-client" href="#">
-                                <img src="images/icon/client-02.png" alt="Client 2">
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <a class="img-client" href="#">
-                                <img src="images/icon/client-03.png" alt="Client 3">
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <a class="img-client" href="#">
-                                <img src="images/icon/client-04.png" alt="Client 4">
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <a class="img-client" href="#">
-                                <img src="images/icon/client-05.png" alt="Client 5">
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <a class="img-client" href="#">
-                                <img src="images/icon/client-06.png" alt="Client 6">
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <a class="img-client" href="#">
-                                <img src="images/icon/client-07.png" alt="Client 7">
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <a class="img-client" href="#">
-                                <img src="images/icon/client-08.png" alt="Client 8">
-                            </a>
+                    </div>
+                    <div class="brand-scroller" aria-label="Partnerzy - linia 2">
+                        <div class="brand-track reverse">
+                            <div class="brand-item"><i class="fab fa-spotify"></i><span>Spotify</span></div>
+                            <div class="brand-item"><i class="fab fa-youtube"></i><span>YouTube</span></div>
+                            <div class="brand-item"><i class="fab fa-amazon"></i><span>Amazon</span></div>
+                            <div class="brand-item"><i class="fab fa-google"></i><span>Google</span></div>
+                            <div class="brand-item"><i class="fab fa-spotify"></i><span>Spotify</span></div>
+                            <div class="brand-item"><i class="fab fa-youtube"></i><span>YouTube</span></div>
+                            <div class="brand-item"><i class="fab fa-amazon"></i><span>Amazon</span></div>
+                            <div class="brand-item"><i class="fab fa-google"></i><span>Google</span></div>
                         </div>
                     </div>
                 </div>
