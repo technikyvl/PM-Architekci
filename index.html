@@ -288,6 +288,9 @@
             .rev_slider_wrapper .rev-text-2{font-size:28px !important;max-width:86vw;white-space:normal!important;word-break:break-word}
             .rev_slider_wrapper p.tp-caption{font-size:13px !important;max-width:86vw}
             .rev_slider_wrapper .rev-btn-1{font-size:12px !important;padding:6px 12px !important}
+            /* prevent left-edge clipping on small devices */
+            .rev_slider_wrapper .rev-text-2{padding-left:12px;padding-right:12px}
+            .rev_slider_wrapper .rev-text-1{padding-left:12px;padding-right:12px}
         }
         @media(max-width:575.98px){
             .rev_slider_wrapper .rev-text-2{font-size:24px !important;max-width:92vw;margin-top:-20px;white-space:normal!important;word-break:break-word}
@@ -299,6 +302,9 @@
             /* white arrows for small mobile when on slider */
             .rev_slider_wrapper .tparrows{color:#fff!important;position:absolute!important;width:22px;height:22px}
             .rev_slider_wrapper .tp-leftarrow.tparrows::after, .rev_slider_wrapper .tp-rightarrow.tparrows::after{width:12px;height:12px}
+            /* prevent left-edge clipping on extra small devices */
+            .rev_slider_wrapper .rev-text-2{padding-left:14px;padding-right:12px}
+            .rev_slider_wrapper .rev-text-1{padding-left:14px;padding-right:12px}
         }
         </style>
 
