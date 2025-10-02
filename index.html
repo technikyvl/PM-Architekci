@@ -36,6 +36,23 @@
     <!-- Main CSS-->
     <link href="css/main.min.css" rel="stylesheet" media="all">
 
+    <style>
+    /* Fix hero (Revolution Slider) arrow icons showing as broken symbols */
+    .tparrows{
+        width:44px; height:44px; background:transparent !important; text-indent:-9999px;
+        border:2px solid rgba(255,255,255,0.7); border-radius:50%; position:relative;
+    }
+    .tparrows:before{content:none !important;}
+    .tp-leftarrow.tparrows::after, .tp-rightarrow.tparrows::after{
+        content:""; position:absolute; top:50%; left:50%; width:10px; height:10px;
+        border:2px solid #fff; border-top:none; border-right:none; display:block;
+        transform:translate(-50%,-50%) rotate(45deg);
+    }
+    .tp-rightarrow.tparrows::after{ transform:translate(-50%,-50%) rotate(-135deg); }
+    /* Hover state for visibility */
+    .tparrows:hover{ border-color:#fff; }
+    </style>
+
     <!--Favicons-->
     <link rel="shortcut icon" href="images/icon/favicon.jpg">
     <link rel="apple-touch-icon" href="apple-icon.png">
