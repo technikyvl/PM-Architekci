@@ -223,13 +223,19 @@
                 <nav class="offcanvas-nav">
                     <a href="index.html">Strona główna</a>
                     <a href="about-us.html">O nas</a>
-                    <a href="project-grid-full.html">Projekty</a>
-                    <div class="submenu-title">Kategorie projektów</div>
-                    <a class="sub" href="projekty-budynki-jednorodzinne.html">Budynki jednorodzinne</a>
-                    <a class="sub" href="projekty-budynki-przemyslowe.html">Budynki przemysłowe</a>
-                    <a class="sub" href="projekty-budynki-uslugowe.html">Budynki usługowe</a>
-                    <a class="sub" href="projekty-budynki-wielorodzinne.html">Budynki wielorodzinne</a>
-                    <a class="sub" href="projekty-wnetrza.html">Wnętrza</a>
+                    <div class="offcanvas-dropdown">
+                        <a class="offcanvas-parent" href="project-grid-full.html">Projekty</a>
+                        <button class="offcanvas-toggle" type="button" aria-expanded="false" aria-controls="offcanvas-submenu-projects" aria-label="Pokaż podkategorie">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 9l6 6 6-6" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+                        <div id="offcanvas-submenu-projects" class="offcanvas-submenu" hidden>
+                            <a class="sub" href="projekty-budynki-jednorodzinne.html">Budynki jednorodzinne</a>
+                            <a class="sub" href="projekty-budynki-przemyslowe.html">Budynki przemysłowe</a>
+                            <a class="sub" href="projekty-budynki-uslugowe.html">Budynki usługowe</a>
+                            <a class="sub" href="projekty-budynki-wielorodzinne.html">Budynki wielorodzinne</a>
+                            <a class="sub" href="projekty-wnetrza.html">Wnętrza</a>
+                        </div>
+                    </div>
                     <a href="blog-grid.html">Blog</a>
                     <a href="contact.html">Kontakt</a>
                 </nav>
@@ -276,6 +282,13 @@
             h4{font-size:16px}
             h5{font-size:14px}
             h6{font-size:12px}
+            /* Offcanvas dropdown */
+            .offcanvas-nav{align-items:stretch}
+            .offcanvas-dropdown{display:flex;flex-direction:column;align-items:center;width:100%}
+            .offcanvas-dropdown .offcanvas-parent{display:inline-block}
+            .offcanvas-dropdown .offcanvas-toggle{border:none;background:#f2f2f2;color:#111;padding:8px 12px;border-radius:8px;margin-top:8px}
+            .offcanvas-submenu{display:flex;flex-direction:column;gap:10px;margin-top:10px}
+            .offcanvas-submenu[hidden]{display:none}
         }
 
         /* (Revert to original Revolution Slider animations by removing custom overrides) */
@@ -290,6 +303,21 @@
             function close(){ offcanvas.classList.remove('open'); setTimeout(function(){ offcanvas.style.display='none'; },300); document.body.classList.remove('no-scroll'); }
             if(toggle){ toggle.addEventListener('click', open); }
             if(closeBtn){ closeBtn.addEventListener('click', close); }
+            // Offcanvas dropdown toggle
+            var ocToggle = document.querySelector('.offcanvas-toggle');
+            var ocSubmenu = document.getElementById('offcanvas-submenu-projects');
+            if(ocToggle && ocSubmenu){
+                ocToggle.addEventListener('click', function(){
+                    var isHidden = ocSubmenu.hasAttribute('hidden');
+                    if(isHidden){
+                        ocSubmenu.removeAttribute('hidden');
+                        ocToggle.setAttribute('aria-expanded','true');
+                    } else {
+                        ocSubmenu.setAttribute('hidden','');
+                        ocToggle.setAttribute('aria-expanded','false');
+                    }
+                });
+            }
         })();
         </script>
 
