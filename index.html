@@ -81,19 +81,6 @@
     </style>
 
     <style>
-    /* Hero (Revolution Slider) arrows styled like other sliders */
-    .tparrows{
-        width:18px; height:18px; background:transparent !important; position:relative;
-        color:#222; /* dark color for desktop */
-    }
-    .tparrows:before{ content:none !important; }
-    .tp-leftarrow.tparrows::after, .tp-rightarrow.tparrows::after{
-        content:""; position:absolute; top:50%; left:50%; width:10px; height:10px;
-        border:2px solid currentColor; border-top:none; border-right:none; display:block;
-        transform:translate(-50%,-50%) rotate(45deg);
-    }
-    .tp-rightarrow.tparrows::after{ transform:translate(-50%,-50%) rotate(-135deg); }
-    
     /* Ensure proper Polish character rendering */
     body, h1, h2, h3, h4, h5, h6, p, span, div, a, button, input, textarea, select {
         font-family: 'Poppins', Arial, "Helvetica Neue", sans-serif !important;
@@ -291,79 +278,7 @@
             h6{font-size:12px}
         }
 
-        /* Responsive improvements for hero slider */
-        .rev_slider_wrapper .rev-text-2{font-size:clamp(34px,5.2vw,48px);line-height:1.15}
-        .rev_slider_wrapper .rev-text-1{font-size:clamp(10px,1.2vw,14px);letter-spacing:.18em}
-        .rev_slider_wrapper p.tp-caption{max-width:56vw}
-        .rev_slider_wrapper .tp-caption{overflow:visible!important;white-space:normal!important}
-        /* prevent clipping inside layers on small screens */
-        .rev_slider_wrapper .tp-parallax-wrap, .rev_slider_wrapper .tp-loop-wrap{overflow:visible!important}
-        /* also disable mask overflow that can crop first characters */
-        .rev_slider_wrapper .tp-mask-wrap{overflow:visible!important}
-        /* Ensure buttons keep one line and natural width */
-        .rev_slider_wrapper .rev-btn-1{white-space:nowrap!important;display:inline-block;border:1px solid rgba(255,255,255,.8);padding:8px 16px}
-        .rev_slider_wrapper .rev-btn-1{font-size:14px;padding:8px 16px}
-
-        /* Show navigation arrows on ALL breakpoints */
-        /* Hero (Revolution Slider) arrows visible on ALL breakpoints */
-        .rev_slider_wrapper .tparrows{display:block!important;opacity:1!important;visibility:visible!important;z-index:50!important}
-        .rev_slider_wrapper .tparrows.tp-leftarrow{left:20px!important;top:50%!important;transform:translateY(-50%)!important}
-        .rev_slider_wrapper .tparrows.tp-rightarrow{right:20px!important;top:50%!important;transform:translateY(-50%)!important}
-        /* Force arrow visibility */
-        .rev_slider_wrapper .tp-leftarrow, .rev_slider_wrapper .tp-rightarrow{display:block!important;opacity:1!important;visibility:visible!important}
-        /* Projects (slick) arrows visible on ALL breakpoints */
-        .slick__nav.arrows-1{display:flex!important;align-items:center;justify-content:space-between}
-        .slick__nav.arrows-1 .slick-prev,
-        .slick__nav.arrows-1 .slick-next{opacity:1;pointer-events:auto}
-
-        @media(max-width:1200px){
-            .rev_slider_wrapper p.tp-caption{max-width:60vw}
-        }
-        @media(max-width:991.98px){
-            .rev_slider_wrapper .rev-text-2{font-size:32px !important;max-width:80vw}
-            .rev_slider_wrapper .rev-text-2{white-space:normal!important;word-break:break-word}
-            .rev_slider_wrapper p.tp-caption{font-size:14px !important;max-width:80vw}
-            .rev_slider_wrapper .rev-btn-1{font-size:13px !important;padding:8px 14px !important}
-            /* podnieś cały blok treści na mobile lekko w górę */
-            .rev_slider_wrapper .rev-text-2{margin-top:-12px}
-            /* mobile arrow positioning */
-            .rev_slider_wrapper .tparrows.tp-leftarrow{left:12px!important;top:50%!important;transform:translateY(-50%)!important}
-            .rev_slider_wrapper .tparrows.tp-rightarrow{right:12px!important;top:50%!important;transform:translateY(-50%)!important}
-            /* white arrows for mobile when on slider */
-            .rev_slider_wrapper .tparrows{color:#fff!important;position:absolute!important;width:22px;height:22px}
-            .rev_slider_wrapper .tp-leftarrow.tparrows::after, .rev_slider_wrapper .tp-rightarrow.tparrows::after{width:12px;height:12px}
-            /* avoid left-edge clipping specifically for slides 2 and 3 */
-            .rev_slider ul > li:nth-child(2) .rev-text-2,
-            .rev_slider ul > li:nth-child(3) .rev-text-2{padding-left:18px;padding-right:12px;max-width:calc(100vw - 30px)}
-        }
-        @media(max-width:767.98px){
-            .rev_slider_wrapper .rev-text-2{font-size:28px !important;max-width:86vw;white-space:normal!important;word-break:break-word}
-            .rev_slider_wrapper p.tp-caption{font-size:13px !important;max-width:86vw}
-            .rev_slider_wrapper .rev-btn-1{font-size:12px !important;padding:6px 12px !important}
-            /* prevent left-edge clipping on small devices */
-            .rev_slider_wrapper .rev-text-2{padding-left:12px;padding-right:12px}
-            .rev_slider_wrapper .rev-text-1{padding-left:12px;padding-right:12px}
-        }
-        @media(max-width:575.98px){
-            .rev_slider_wrapper .rev-text-2{font-size:24px !important;max-width:92vw;margin-top:-20px;white-space:normal!important;word-break:break-word}
-            .rev_slider_wrapper p.tp-caption{font-size:12px !important;max-width:90vw}
-            .rev_slider_wrapper .rev-btn-1{font-size:11px !important;padding:6px 10px !important}
-            /* small mobile arrow positioning */
-            .rev_slider_wrapper .tparrows.tp-leftarrow{left:8px!important;top:50%!important;transform:translateY(-50%)!important}
-            .rev_slider_wrapper .tparrows.tp-rightarrow{right:8px!important;top:50%!important;transform:translateY(-50%)!important}
-            /* white arrows for small mobile when on slider */
-            .rev_slider_wrapper .tparrows{color:#fff!important;position:absolute!important;width:22px;height:22px}
-            .rev_slider_wrapper .tp-leftarrow.tparrows::after, .rev_slider_wrapper .tp-rightarrow.tparrows::after{width:12px;height:12px}
-            /* prevent left-edge clipping on extra small devices */
-            .rev_slider_wrapper .rev-text-2{padding-left:14px;padding-right:12px}
-            .rev_slider_wrapper .rev-text-1{padding-left:14px;padding-right:12px}
-            /* stronger fix for slides 2 and 3 on very small widths */
-            .rev_slider ul > li:nth-child(2) .rev-text-2,
-            .rev_slider ul > li:nth-child(3) .rev-text-2{padding-left:22px;padding-right:14px;max-width:calc(100vw - 36px)}
-            /* increase spacing between content and button on mobile for slide 1 */
-            .rev_slider ul > li:nth-child(1) .rev-text-2{margin-bottom:24px}
-            .rev_slider ul > li:nth-child(1) p.tp-caption{margin-bottom:20px}
-        }
+        /* (Revert to original Revolution Slider animations by removing custom overrides) */
         </style>
 
         <script>
