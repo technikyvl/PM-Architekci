@@ -312,18 +312,25 @@
         /* Hero 1: solid white rectangle behind the text column (no HTML changes) */
         .rev_slider_wrapper .rev_slider .rev-item{position:relative}
         .rev_slider_wrapper .rev_slider .rev-item::before{
-            content:""; position:absolute; z-index:1; background:#ffffff; opacity:1; border-radius:10px;
+            content:""; position:absolute; z-index:25; background:#ffffff; opacity:1; border-radius:10px; pointer-events:none;
             box-shadow:0 4px 20px rgba(0,0,0,.05);
             /* Left gutter ~6% of slider width; panel covers text column */
             left:6%; width:40%; top:14%; bottom:20%;
         }
         /* Ensure captions sit above the rectangle */
-        .rev_slider_wrapper .rev_slider .tp-caption{position:relative; z-index:2}
+        .rev_slider_wrapper .rev_slider .tp-caption{position:relative; z-index:50}
+        /* Additional safety: panel anchored to main heading to fully wrap label+paragraph+button */
+        .rev_slider_wrapper .rev_slider .tp-caption.rev-text-2::before{
+            content:""; position:absolute; z-index:-1; background:#ffffff; border-radius:10px; pointer-events:none;
+            left:-40px; right:-40px; top:-100px; bottom:160px; box-shadow:0 4px 20px rgba(0,0,0,.05);
+        }
         @media (max-width: 1199.98px){
             .rev_slider_wrapper .rev_slider .rev-item::before{left:7%; width:50%; top:12%; bottom:22%}
+            .rev_slider_wrapper .rev_slider .tp-caption.rev-text-2::before{left:-28px; right:-28px; top:-90px; bottom:140px}
         }
         @media (max-width: 767.98px){
             .rev_slider_wrapper .rev_slider .rev-item::before{left:5%; right:5%; width:auto; top:10%; bottom:18%}
+            .rev_slider_wrapper .rev_slider .tp-caption.rev-text-2::before{left:-18px; right:-18px; top:-80px; bottom:120px; border-radius:8px}
         }
         </style>
 
