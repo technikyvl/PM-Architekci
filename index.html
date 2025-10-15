@@ -314,15 +314,16 @@
         .rev_slider_wrapper .rev_slider .rev-item::before{
             content:""; position:absolute; z-index:1; background:#ffffff; opacity:1; border-radius:10px;
             box-shadow:0 4px 20px rgba(0,0,0,.05);
-            left:260px; top:180px; width:720px; height:430px;
+            /* Left gutter ~6% of slider width; panel covers text column */
+            left:6%; width:40%; top:14%; bottom:20%;
         }
         /* Ensure captions sit above the rectangle */
         .rev_slider_wrapper .rev_slider .tp-caption{position:relative; z-index:2}
         @media (max-width: 1199.98px){
-            .rev_slider_wrapper .rev_slider .rev-item::before{left:140px; top:160px; width:560px; height:380px}
+            .rev_slider_wrapper .rev_slider .rev-item::before{left:7%; width:50%; top:12%; bottom:22%}
         }
         @media (max-width: 767.98px){
-            .rev_slider_wrapper .rev_slider .rev-item::before{left:16px; right:16px; width:auto; top:120px; height:360px}
+            .rev_slider_wrapper .rev_slider .rev-item::before{left:5%; right:5%; width:auto; top:10%; bottom:18%}
         }
         </style>
 
