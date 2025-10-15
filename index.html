@@ -309,22 +309,22 @@
         </style>
 
         <style>
-        /* Hero 1: unified translucent panel behind the entire text column */
+        /* Hero 1: unified opaque panel behind the entire text column */
         .rev_slider_wrapper .rev_slider .tp-caption{position:relative;display:inline-block;color:#000 !important;z-index:2}
         /* Attach the panel to the main heading so it animates in sync */
         .rev_slider_wrapper .rev_slider .tp-caption.rev-text-2::before{
-            content:"";position:absolute;z-index:1;background:rgba(255,255,255,.92);border-radius:8px;
-            /* Extend to cover label above and paragraph/button below */
-            left:-24px;right:-24px;top:-90px;bottom:140px;
+            content:"";position:absolute;z-index:1;background:#ffffff;border-radius:10px;
+            /* Simulate 40px padding around the whole column (label, h, p, button) */
+            left:-40px;right:-40px;top:-120px;bottom:200px;
             box-shadow:0 0 0 1px rgba(0,0,0,.06);
         }
-        /* Button text remains black for contrast on light panel */
+        /* Ensure button text stays black on white panel */
         .rev_slider_wrapper .rev_slider .tp-caption .rev-btn-1{color:#000 !important}
         @media (max-width: 767.98px){
-            .rev_slider_wrapper .rev_slider .tp-caption.rev-text-2::before{left:-18px;right:-18px;top:-70px;bottom:120px;border-radius:6px}
+            .rev_slider_wrapper .rev_slider .tp-caption.rev-text-2::before{left:-32px;right:-32px;top:-100px;bottom:160px}
         }
         @media (min-width: 1200px){
-            .rev_slider_wrapper .rev_slider .tp-caption.rev-text-2::before{left:-32px;right:-32px;top:-100px;bottom:160px;border-radius:10px}
+            .rev_slider_wrapper .rev_slider .tp-caption.rev-text-2::before{left:-40px;right:-40px;top:-130px;bottom:220px}
         }
         </style>
 
