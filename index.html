@@ -308,6 +308,24 @@
         }
         </style>
 
+        <style>
+        /* Hero 1: improve readability with translucent white background behind captions/buttons */
+        .rev_slider_wrapper .rev_slider .tp-caption{position:relative;display:inline-block;color:#000 !important}
+        .rev_slider_wrapper .rev_slider .tp-caption.rev-text-1::before,
+        .rev_slider_wrapper .rev_slider .tp-caption.rev-text-2::before,
+        .rev_slider_wrapper .rev_slider .tp-caption.tp-resizeme:not(a)::before{
+            content:"";position:absolute;z-index:-1;inset:-6px -10px;background:rgba(255,255,255,.78);border-radius:6px;
+        }
+        /* Button label */
+        .rev_slider_wrapper .rev_slider .tp-caption .rev-btn-1{position:relative;color:#000 !important}
+        .rev_slider_wrapper .rev_slider .tp-caption .rev-btn-1::before{
+            content:"";position:absolute;z-index:-1;inset:-8px -12px;background:rgba(255,255,255,.85);border-radius:8px;
+        }
+        /* Optional subtle border to separate on very bright photos */
+        .rev_slider_wrapper .rev_slider .tp-caption::before,
+        .rev_slider_wrapper .rev_slider .tp-caption .rev-btn-1::before{box-shadow:0 0 0 1px rgba(0,0,0,.08)}
+        </style>
+
         
 
         <script>
