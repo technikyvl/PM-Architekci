@@ -309,21 +309,23 @@
         </style>
 
         <style>
-        /* Hero 1: improve readability with translucent white background behind captions/buttons */
-        .rev_slider_wrapper .rev_slider .tp-caption{position:relative;display:inline-block;color:#000 !important}
-        .rev_slider_wrapper .rev_slider .tp-caption.rev-text-1::before,
-        .rev_slider_wrapper .rev_slider .tp-caption.rev-text-2::before,
-        .rev_slider_wrapper .rev_slider .tp-caption.tp-resizeme:not(a)::before{
-            content:"";position:absolute;z-index:-1;inset:-6px -10px;background:rgba(255,255,255,.78);border-radius:6px;
+        /* Hero 1: unified translucent panel behind the entire text column */
+        .rev_slider_wrapper .rev_slider .tp-caption{position:relative;display:inline-block;color:#000 !important;z-index:2}
+        /* Attach the panel to the main heading so it animates in sync */
+        .rev_slider_wrapper .rev_slider .tp-caption.rev-text-2::before{
+            content:"";position:absolute;z-index:1;background:rgba(255,255,255,.92);border-radius:8px;
+            /* Extend to cover label above and paragraph/button below */
+            left:-24px;right:-24px;top:-90px;bottom:140px;
+            box-shadow:0 0 0 1px rgba(0,0,0,.06);
         }
-        /* Button label */
-        .rev_slider_wrapper .rev_slider .tp-caption .rev-btn-1{position:relative;color:#000 !important}
-        .rev_slider_wrapper .rev_slider .tp-caption .rev-btn-1::before{
-            content:"";position:absolute;z-index:-1;inset:-8px -12px;background:rgba(255,255,255,.85);border-radius:8px;
+        /* Button text remains black for contrast on light panel */
+        .rev_slider_wrapper .rev_slider .tp-caption .rev-btn-1{color:#000 !important}
+        @media (max-width: 767.98px){
+            .rev_slider_wrapper .rev_slider .tp-caption.rev-text-2::before{left:-18px;right:-18px;top:-70px;bottom:120px;border-radius:6px}
         }
-        /* Optional subtle border to separate on very bright photos */
-        .rev_slider_wrapper .rev_slider .tp-caption::before,
-        .rev_slider_wrapper .rev_slider .tp-caption .rev-btn-1::before{box-shadow:0 0 0 1px rgba(0,0,0,.08)}
+        @media (min-width: 1200px){
+            .rev_slider_wrapper .rev_slider .tp-caption.rev-text-2::before{left:-32px;right:-32px;top:-100px;bottom:160px;border-radius:10px}
+        }
         </style>
 
         
