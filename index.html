@@ -296,6 +296,12 @@
         /* (Revert to original Revolution Slider animations by removing custom overrides) */
         </style>
 
+        <style>
+        /* Set black background for the first hero slide only */
+        .rev_slider_wrapper .rev_slider ul > li:nth-child(1){background:#000 !important}
+        .rev_slider_wrapper .rev_slider ul > li:nth-child(1) .rev-slidebg{display:none !important}
+        </style>
+
         <script>
         (function(){
             var toggle = document.querySelector('.js-menu-toggle');
