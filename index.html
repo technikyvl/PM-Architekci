@@ -308,6 +308,24 @@
         }
         </style>
 
+        <style>
+        /* Hero 1: solid white rectangle behind the text column (no HTML changes) */
+        .rev_slider_wrapper .rev_slider .rev-item{position:relative}
+        .rev_slider_wrapper .rev_slider .rev-item::before{
+            content:""; position:absolute; z-index:1; background:#ffffff; opacity:1; border-radius:10px;
+            box-shadow:0 4px 20px rgba(0,0,0,.05);
+            left:260px; top:180px; width:720px; height:430px;
+        }
+        /* Ensure captions sit above the rectangle */
+        .rev_slider_wrapper .rev_slider .tp-caption{position:relative; z-index:2}
+        @media (max-width: 1199.98px){
+            .rev_slider_wrapper .rev_slider .rev-item::before{left:140px; top:160px; width:560px; height:380px}
+        }
+        @media (max-width: 767.98px){
+            .rev_slider_wrapper .rev_slider .rev-item::before{left:16px; right:16px; width:auto; top:120px; height:360px}
+        }
+        </style>
+
         
 
         
