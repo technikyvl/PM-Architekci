@@ -296,6 +296,18 @@
         /* (Revert to original Revolution Slider animations by removing custom overrides) */
         </style>
 
+        <style>
+        /* Latest Projects: enforce uniform image heights like original template */
+        .slick-project .media-project .media__img{position:relative;overflow:hidden}
+        .slick-project .media-project .media__img img{width:100%;height:260px;object-fit:cover;object-position:center;display:block}
+        @media (min-width: 768px){
+            .slick-project .media-project .media__img img{height:300px}
+        }
+        @media (min-width: 1200px){
+            .slick-project .media-project .media__img img{height:340px}
+        }
+        </style>
+
         
 
         <script>
