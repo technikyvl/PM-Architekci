@@ -55,6 +55,28 @@
     .quote-wrap{position:relative;z-index:1;max-width:980px;margin:0 auto;text-align:center}
     .quote{font-size:30px;line-height:1.4;font-weight:600;color:#111}
     .quote-author{margin-top:14px;color:#444}
+    /* Extra storytelling components */
+    .xp-section{padding:90px 0;border-top:1px solid rgba(0,0,0,.06)}
+    .xp-wrap{display:flex;align-items:center;gap:48px}
+    .xp-num{flex:0 0 280px;height:280px;border:2px solid rgba(0,0,0,.08);display:flex;align-items:center;justify-content:center;border-radius:12px;position:relative;overflow:hidden}
+    .xp-num:after{content:"";position:absolute;inset:0;background:linear-gradient(135deg, rgba(0,0,0,.06), transparent 35%);pointer-events:none}
+    .xp-num .num{font-size:120px;font-weight:700;letter-spacing:2px;color:#111}
+    .xp-copy h3{font-size:36px;margin-bottom:14px}
+    .xp-copy p{margin-bottom:10px}
+    .showcase{padding:100px 0}
+    .showcase .img-wrap{position:relative;border-radius:10px;overflow:hidden;box-shadow:0 12px 36px rgba(0,0,0,.08)}
+    .showcase .img-wrap img{width:100%;height:520px;object-fit:cover;display:block}
+    .showcase .copy{position:relative}
+    .showcase .copy:before{content:"";position:absolute;left:-60px;top:26px;width:46px;height:2px;background:#111;opacity:.25}
+    .showcase h2{font-size:44px;margin-bottom:14px}
+    .showcase p{max-width:560px}
+    .showcase.alt .copy:before{left:auto;right:-60px}
+    .showcase .badge{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#888;margin-bottom:8px;display:inline-block}
+    .parallax-band{position:relative;padding:160px 0;margin:40px 0;background-attachment:fixed;background-position:center;background-size:cover;border-radius:10px;overflow:hidden}
+    .parallax-band .overlay{position:absolute;inset:0;background:rgba(0,0,0,.25)}
+    .parallax-band .inner{position:relative;z-index:1;text-align:center;color:#fff}
+    .parallax-band h2{font-size:42px;margin-bottom:8px}
+    .parallax-band p{opacity:.9}
     @media (max-width: 1199.98px){
         .process-grid{grid-template-columns:repeat(2,1fr)}
         .values-section .detail figure{flex-basis:200px}
@@ -65,6 +87,9 @@
         .values-section .detail figure{width:100%}
         .process-grid{grid-template-columns:1fr}
         .quote{font-size:24px}
+        .xp-wrap{flex-direction:column;align-items:flex-start}
+        .showcase .img-wrap img{height:320px}
+        .showcase h2{font-size:32px}
     }
     </style>
 
@@ -658,6 +683,70 @@
                     <div class="quote-wrap">
                         <div class="quote">„Projektujemy przestrzenie, które łączą funkcję, światło i materiał w ponadczasową całość.”</div>
                         <div class="quote-author">Manifest PM Architekci</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- EXTRA: Liczby i doświadczenie (asymetryczne, cienkie linie) -->
+            <section class="xp-section">
+                <div class="container">
+                    <div class="xp-wrap">
+                        <div class="xp-num"><span class="num">25</span></div>
+                        <div class="xp-copy">
+                            <h3 class="title-1">Lat doświadczenia</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac arcu non eros cursus volutpat. Suspendisse vitae interdum ipsum, ac luctus turpis.</p>
+                            <p>Aliquam iaculis, arcu non fringilla viverra, massa sapien ultricies arcu, sed semper dui magna vitae lectus.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- EXTRA: Showcase – asymetria, linie i nachodzące obrazy -->
+            <section class="showcase">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-7">
+                            <div class="img-wrap">
+                                <img src="images/BUDYNKI WIELORODZINNE/Linden Park/zdjęcia/sarni_5_Photo - 8.webp" alt="Showcase A">
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="copy">
+                                <span class="badge">Architecture</span>
+                                <h2>Space Speaker Studio</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dictum porta erat sit amet lobortis. Duis efficitur dui id dictum posuere.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="showcase alt">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-5 order-lg-1 order-2">
+                            <div class="copy text-lg-right">
+                                <span class="badge">Architecture</span>
+                                <h2>Lunisolar Homestay</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sagittis, est non finibus feugiat, mauris tellus vehicula neque, id tincidunt lectus sem et ex.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 order-lg-2 order-1 m-b-30 m-lg-b-0">
+                            <div class="img-wrap">
+                                <img src="images/BUDYNKI WIELORODZINNE/Grodzisk 1/Zdjęcia/grodzisk-45.webp" alt="Showcase B">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- EXTRA: Parallax band / manifest wizualny -->
+            <section class="parallax-band" style="background-image:url('images/BUDYNKI PRZEMYSŁOWE/Widoki w lecie/3.webp')">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="inner">
+                        <h2>Make it with passion.</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus convallis, arcu non porttitor mattis, orci arcu feugiat erat, non molestie lacus nibh ut nisi.</p>
                     </div>
                 </div>
             </section>
