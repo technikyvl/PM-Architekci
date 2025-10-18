@@ -477,15 +477,50 @@
 
 
 
-            <!-- STORY 4: Cytat / misja biura -->
-            <section class="quote-section">
+            <!-- CONTACT-->
+            <section class="section p-b-80">
                 <div class="container">
-                    <div class="quote-wrap">
-                        <div class="quote">„Projektujemy przestrzenie, które łączą funkcję, światło i materiał w ponadczasową całość.”</div>
-                        <div class="quote-author">Manifest PM Architekci</div>
+                    <div class="map-wrapper js-google-map m-b-60" data-makericon="images/icon/marker.png" data-makers="[[&quot;TATEE&quot;, &quot;Now that you visited our website,&lt;br&gt; how about checking out our office too?&quot;, 40.715681, -74.003427]]">
+                        <div class="map__holder js-map-holder" id="map" style="height: 370px;"></div>
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="col-lg-4">
+                            <div class="contact-info">
+                                <div class="contact-info__item">
+                                    <h5 class="title--sm2">Adres:</h5>
+                                    <p class="value">43-300 Bielsko-Biała, ul. Żywiecka 13 / Byłe zakłady WEGA, aktualnie SPOMET</p>
+                                </div>
+                                <div class="contact-info__item">
+                                    <h5 class="title--sm2">Telefon:</h5>
+                                    <p class="value">+48 515 077 907</p>
+                                </div>
+                                <div class="contact-info__item">
+                                    <h5 class="title--sm2">Email:</h5>
+                                    <p class="value">archstyl@poczta.onet.pl</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <form class="form-contact js-contact-form" method="POST" action="#">
+                                <div class="form-row no-gutters">
+                                    <div class="col-md-6">
+                                        <input class="au-input" type="text" name="name" placeholder="Imię i nazwisko" required="required">
+                                        <input class="au-input" type="email" name="email" placeholder="Adres email" required="required" pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}">
+                                        <input class="au-input" type="text" name="phone" placeholder="Telefon" required="required">
+                                    </div>
+                                    <div class="col-md-6 p-r-0">
+                                        <textarea class="au-textarea" name="message" placeholder="Wiadomość*" required="required"></textarea>
+                                        <div class="text-right">
+                                            <button class="au-btn au-btn--solid" type="submit">Wyślij wiadomość</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </section>
+            <!-- END CONTACT-->
 
 
 
